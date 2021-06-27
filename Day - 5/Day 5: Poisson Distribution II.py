@@ -1,26 +1,15 @@
-# Question: The final grades for a Physics exam taken by a large group of
-# students have a mean of mi = 70 and a standard deviation of sigma = 10.
-# If we can approximate the distribution of these grades by a normal
-# distribution, what percentage of the students:
-# 1. Scored higher than 80 (i.e., have a grade > 80)?
-# 2. Passed the test (i.e., have a grade >= 60)?
-# 3. Failed the test (i.e., have a grade < 60)?
-
-# Import library
-import math
-
-# Define functions
-def cumulative(mean, std, value):
-    return 0.5 * (1 + math.erf((value - mean) / (std * (2 ** 0.5))))
+# Question: The manager of a industrial plant is planning to buy a machine of
+# either type A or type B. For each day’s operation:
+# The number of repairs, X, that machine A needs is a Poisson random variable
+# with mean 0.88. The daily cost of operating A is C = 160 + 40X².
+# The number of repairs, Y, that machine B needs is a Poisson random variable
+# with mean 1.55. The daily cost of operating B is C = 128 + 40Y².
 
 # Set data
-initial_values = list(map(float, input().split()))
-mean = initial_values[0]
-std = initial_values[1]
-val_first_question = float(input())
-val_sec_third_question = float(input())
+lambdas = list(map(float, input().split()))
+lambda_a = lambdas[0]
+lambda_b = lambdas[1]
 
 # Gets the result and show on the screen
-print (round(100 - (cumulative(mean, std, val_first_question) * 100), 2))
-print (round(100 - (cumulative(mean, std, val_sec_third_question) * 100), 2))
-print (round(cumulative(mean, std, val_sec_third_question) * 100, 2))
+print (round(160 + 40 * (lambda_a + lambda_a ** 2), 3))
+print (round(128 + 40 * (lambda_b + lambda_b ** 2), 3))
