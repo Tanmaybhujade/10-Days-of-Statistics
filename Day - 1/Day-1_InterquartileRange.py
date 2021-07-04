@@ -26,3 +26,7 @@ else:
     data_low = new_data[0:int(size/2)]
     data_high = new_data[int(size/2)+1:size]
 
+# Get the final result and print on the screen
+low = median(len(data_low), data_low)
+high = median(len(data_high), data_high)
+print(high - low)
