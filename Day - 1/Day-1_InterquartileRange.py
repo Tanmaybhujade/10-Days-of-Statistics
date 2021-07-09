@@ -29,4 +29,4 @@ else:
 # Get the final result and print on the screen
 low = median(len(data_low), data_low)
 high = median(len(data_high), data_high)
-
+print(high - low)
