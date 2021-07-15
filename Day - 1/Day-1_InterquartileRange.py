@@ -1,10 +1,4 @@
-# Define functions
-def median(size, values):
-    if size % 2 == 0:
-        median = (values[int(size/2)-1] + values[int(size/2)]) / 2
-    else:
-        median = float(values[int(size/2)])
-    return median
+
 
 # Set the data
 size = int(input())
