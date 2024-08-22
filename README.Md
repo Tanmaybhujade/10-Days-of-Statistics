@@ -1,2 +1,2 @@
-# 10-Days-of-Statistics solution in python 
+# 10-Days-of-Statistics solution in python code
 
